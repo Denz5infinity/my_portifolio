@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Roboto",Sans-Serif;
+  background-color: var(--secondary);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  
+}
+.wrapper{
+  flex:1;
+}
+:root {
+  --primary: #1E1E1E;     /* Dark Gray - for header/footer, buttons */
+  --secondary: #2D2D2D;   /* Slightly lighter gray - cards, backgrounds */
+  --accent: #4CC9F0;      /* Cyan - hover effects, call-to-action */
+  --text-color: #FFFFFF;   /* Main text color */
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+  font-size: 0.7rem;
+  color:white;
+  border: none;
+  padding:10px;
+  background-color: var(--primary);
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  z-index: 10;
+  
+  
+}
+.logo {
+  font-size: 1.5rem;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05); 
+  color: var(--accent);
+}
+
+.logo span {
+  font-size: 1rem;
+  font-family: 'Tahoma', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #FF6B6B;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.logo span:hover {
+  color: var(--accent);
+  opacity: 0.8;
+}
+.right-header ul{
+  display: flex;
+  gap:1.4rem;
+  align-items: center;
+}
+.right-header ul li{
+   list-style: none;
+}
+.right-header ul li a {
+  text-decoration:none ;
+  color:white;
+  font-weight: 500;
+  padding:20px 4px;
+  transition: all ease 0.15s;
+ 
+}
+.right-header ul li a:hover{
+  color:var(--accent);
+  font-weight:bold ;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  margin:3.55rem 0 1rem 1rem;
+  padding:0.2rem 3.02rem 0.2rem 0.2rem;
+}
+.hero{
+  display: flex;
+  gap:0.5rem;
+  align-items: center;
+}
+.hero-left,
+.hero-right{
+  flex:1;
+}
+.hero-left{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  
+}
+.hero-left h4{
+  font-size: 2rem;
+  flex-wrap: nowrap;
+}
+.profile-picture{
+  width:12rem;
+  height:12rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+footer{
+  flex:1;
+  padding-top: 10px;
+  width:100%;
+  height:3rem;
+  background-color:var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:var(--text-color);
+  font-weight:500 ;
+}
