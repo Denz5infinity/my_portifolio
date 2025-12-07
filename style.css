@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 body{
   font-family: "Roboto",Sans-Serif;
@@ -92,14 +93,19 @@ main{
   gap: .5rem;
   position:relative;
   display: flex;
+  align-items:center;
   flex-direction: column;
-  margin:3.55rem 0 1rem 1rem;
+  margin:3.55rem 0 0rem 0rem;
   padding:0.2rem 3.02rem 0.2rem 0.2rem;
 }
 .hero{
   display: flex;
   gap:0.5rem;
   align-items: center;
+  padding:.5rem;
+  width:100%;
+  border-radius: 8px;
+  background-color: rgba(169,169,169,0.5);
 }
 .hero-left,
 .hero-right{
@@ -112,14 +118,110 @@ main{
   
 }
 .hero-left h4{
-  font-size: 2rem;
+  font-size: 2.5rem;
   flex-wrap: nowrap;
+}
+.hero-left p{
+  font-size: 0.7rem;
+  font-style: italic;
+  color: lightgray;
 }
 .profile-picture{
   width:12rem;
   height:12rem;
   object-fit: cover;
   border-radius: 50%;
+}
+.about-me{
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  
+}
+.skills h3,
+.projects h3,
+.contacts h3,
+.about-me h3{
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  
+}
+.about-me-wrapper{
+  display: block;
+  position: relative;
+  padding:15px;
+  line-height: 25px;
+  border-radius: 8px;
+  background-color: rgba(169,169,169,0.5);
+}
+.about-me-left{
+  position:relative;
+}
+.about-me img{
+  float: right;
+  margin:0 0 1rem 1rem;
+  width:15rem;
+  height:15rem;
+  border-radius: 50%;
+  shape-outside: circle;
+  clip-path: circle();
+}
+.skills{
+  margin-top: 3rem;
+}
+.skill-wrapper{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  
+}
+.skill-card,
+.project-card{
+  background-color: rgba(169,169,169,0.3);
+  padding: 6px 14px;
+  text-align: center;
+  border-radius: 10px;
+}
+.skills h4{
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+.project img{
+  min-width: 160px;
+  min-height: 160px;
+}
+.contacts{
+  display: flex;
+  flex-direction: column;
+  min-width: ;
+}
+.contact-wrapper{
+  background-color: rgba(169,169,169,0.5);
+  display:flex;
+  flex-direction: column;
+  gap:12px;
+  padding:.5rem;
+  justify-content: center;
+  border-radius: 8px;
+}
+.contact-wrapper i {
+  font-size: 2.5rem;
+}
+.contact-card{
+  display:flex;
+  flex-direction: row;
+  gap:10px;
+  
+
+}
+.contact-card p span {
+  color:white;
+}
+.contact-card i{
+  color:white;
 }
 footer{
   flex:1;
@@ -132,4 +234,107 @@ footer{
   justify-content: center;
   color:var(--text-color);
   font-weight:500 ;
+}
+@media(min-width: 480px) {
+  .hero-left h4 {
+    font-size: 2rem;
+  }
+
+  .profile-picture {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .about-me-wrapper {
+    padding: 15px;
+  }
+
+  .skills h3,
+  .projects h3,
+  .contacts h3,
+  .about-me h3 {
+    font-size: 2.3rem;
+  }
+}
+@media(min-width: 768px) {
+
+  header {
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+
+  .right-header ul {
+    gap: 1.4rem;
+  }
+
+  main {
+    padding: 0.2rem 3rem;
+  }
+
+  .hero {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .hero-left h4 {
+    font-size: 2.5rem;
+  }
+
+  .profile-picture {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  /* About section */
+  .about-me img {
+    width: 15rem;
+    height: 15rem;
+    float: right;
+    shape-outside: circle;
+    margin-left: 1rem;
+  }
+
+  .about-me-wrapper {
+    text-align: left;
+    line-height: 25px;
+  }
+
+  /* Skills grid becomes 2 columns */
+  .skill-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(min-width: 1024px) {
+
+  header {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .hero-left h4 {
+    font-size: 3rem;
+  }
+
+  .profile-picture {
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .skill-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-wrapper {
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .contact-card i {
+    font-size: 3rem;
+  }
 }
